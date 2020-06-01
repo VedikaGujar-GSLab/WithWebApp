@@ -10,7 +10,10 @@ namespace CiCd_WithGit.Controllers
     [Route("api/[controller]")]
     public class ValuesController : ControllerBase
     {
+
         private readonly ILogger<ValuesController> _logger;
+
+
 
         public ValuesController()
         {
@@ -21,17 +24,16 @@ namespace CiCd_WithGit.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
+        public IEnumerable<string> Get()
+        {
+            return new string[] { "Test", "TestAbc" };
+        }
+
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
             return "TestCiCd";
-        }
-
-
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
-        {
-            return new string[] { "TestCiCd", "Enjoy working with devops" };
         }
     }
 }
