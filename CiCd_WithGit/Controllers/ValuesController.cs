@@ -30,8 +30,8 @@ namespace CiCd_WithGit.Controllers
             return new string[] { "Test", "TestAbc" };
         }
 
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        [HttpGet("GetValue/{id}")]
+        public ActionResult<string> GetString(int id)
         {
             return "TestCiCd";
         }

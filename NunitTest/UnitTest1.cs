@@ -14,7 +14,7 @@ namespace NunitTest
         [Test]
         public void GetReturnsCorrectNumber()
         {
-            var returnValue = controller.Get(1);
+            var returnValue = controller.GetString(1);
             Assert.AreEqual("TestCiCd", returnValue.Value);
         }
 
