@@ -29,10 +29,10 @@ namespace CiCd_WithGit.Controllers
         }
 
 
-        //[HttpGet("/value")]
-        //public ActionResult<string> GetValue()
-        //{
-        //    return "TestCiCd";
-        //}
+        [HttpGet]
+        public ActionResult<string> GetValue()
+        {
+            return "TestCiCd";
+        }
     }
 }
