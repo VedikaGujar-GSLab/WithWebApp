@@ -7,8 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace CiCd_WithGit.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ValuesController : ControllerBase
     {
         private readonly ILogger<ValuesController> _logger;
@@ -30,9 +29,9 @@ namespace CiCd_WithGit.Controllers
 
 
         [HttpGet]
-        public ActionResult<string> GetValue()
+        public ActionResult<IEnumerable<string>> Get()
         {
-            return "TestCiCd";
+            return new string[] { "TestCiCd", "Enjoy working with devops" };
         }
     }
 }
